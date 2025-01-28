@@ -19,3 +19,27 @@ int main(){
 }
 
 //Do not modify source code above this line
+void shuffle(int &z,int &x,int &c,int &v){
+	int m[4]={z,x,c,v};
+	srand(time(0));
+	for(int i=0;i<5;i++){
+		int ran=rand()%4;
+		z=m[ran];
+		ran =rand()%4;
+		x=m[ran];
+		ran =rand()%4;
+		c=m[ran];
+		ran =rand()%4;
+		v=m[ran];
+	}
+	while(z==x||x==c||c==v||v==z||x==v||z==c){
+		int ran=rand()%4;
+		z=m[ran];
+		ran =rand()%4;
+		x=m[ran];
+		ran =rand()%4;
+		c=m[ran];
+		ran =rand()%4;
+		v=m[ran];
+	}
+}
